@@ -1,0 +1,60 @@
+/* Đảm bảo toàn bộ bố cục cao tối thiểu bằng viewport */
+html, body {
+  height: 100%; /* Đặt chiều cao của body là 100% viewport */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử dọc */
+  min-height: 100vh; /* Chiều cao tối thiểu của ứng dụng là viewport */
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 1; /* Đẩy footer xuống khi nội dung ngắn */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử con */
+  justify-content: space-between; /* Đẩy các phần tử ra 2 đầu của header */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+  padding: 1rem 2rem; /* Thêm một chút khoảng cách bên trong header */
+}
+
+.header h1 {
+  margin: 0; /* Loại bỏ khoảng cách mặc định xung quanh tiêu đề */
+}
+
+.header p {
+  margin: 0; /* Loại bỏ khoảng cách mặc định của đồng hồ */
+}
+
+.search {
+  margin-bottom: 1rem;
+}
+
+.weather-card {
+  width: 500px;
+  height: auto; /* Đảm bảo chiều cao tự động điều chỉnh */
+  background-size: cover; /* Giữ ảnh nền phủ đầy */
+  background-position: center; /* Căn giữa ảnh nền */
+  padding: 1rem; /* Thêm một chút khoảng cách giữa nội dung và viền */
+  color: #fff; /* Đảm bảo chữ có thể dễ đọc trên ảnh nền */
+  border-radius: 8px; /* Tạo góc bo tròn cho thẻ */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ cho thẻ */
+}
+
+.footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.9rem;
+}
